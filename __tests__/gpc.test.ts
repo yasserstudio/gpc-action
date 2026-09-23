@@ -4,6 +4,7 @@ import {
   resolveVersion,
   checksumFor,
   DEFAULT_GPC_VERSION,
+  PINNED_CHECKSUMS,
 } from "../src/gpc";
 
 describe("platformAsset", () => {
@@ -73,5 +74,21 @@ describe("checksumFor", () => {
 
   it("throws when the asset is absent", () => {
     expect(() => checksumFor(checksums, "gpc-windows-x64.exe")).toThrow(/No checksum entry/);
+  });
+});
+
+describe("PINNED_CHECKSUMS", () => {
+  it("pins a SHA-256 for every platform asset of the default version", () => {
+    const pinned = PINNED_CHECKSUMS[DEFAULT_GPC_VERSION];
+    expect(pinned).toBeDefined();
+    for (const [platform, arch] of [
+      ["darwin", "arm64"],
+      ["darwin", "x64"],
+      ["linux", "arm64"],
+      ["linux", "x64"],
+      ["win32", "x64"],
+    ] as const) {
+      expect(pinned![platformAsset(platform, arch)]).toMatch(/^[0-9a-f]{64}$/);
+    }
   });
 });
