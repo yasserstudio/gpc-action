@@ -65,7 +65,7 @@ inputs:
     description: "Escape hatch: run an arbitrary gpc command (e.g. 'releases promote --from internal --to production'). When set, the opinionated upload inputs are ignored; service-account-json and package-name are still required."
     required: false
   gpc-version:
-    description: "GPC CLI version (e.g. 0.9.98). Use 'latest' to resolve the newest release. Defaults to a pinned, checksum-verified version (currently 0.9.98)."
+    description: "GPC CLI version (e.g. 0.9.99). Use 'latest' to resolve the newest release. Defaults to a pinned, checksum-verified version (currently 0.9.98)."
     required: false
   working-directory:
     description: "Directory to run gpc in."

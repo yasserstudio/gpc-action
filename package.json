@@ -1,6 +1,6 @@
 {
   "name": "gpc-action",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "description": "Publish Android apps to Google Play with GPC: upload with a built-in preflight compliance gate.",
   "main": "dist/index.js",
