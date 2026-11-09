@@ -10,7 +10,7 @@ const REPO = "yasserstudio/gpc";
  * Default GPC CLI version the action ships against. Bump this (and PINNED_CHECKSUMS)
  * when cutting an action release that targets a newer GPC. Overridable via `gpc-version`.
  */
-export const DEFAULT_GPC_VERSION = "1.0.0";
+export const DEFAULT_GPC_VERSION = "1.0.1";
 
 /**
  * Known-good SHA-256 digests for DEFAULT_GPC_VERSION, committed to this repo. These are
@@ -19,6 +19,13 @@ export const DEFAULT_GPC_VERSION = "1.0.0";
  * to release-provided checksums with a warning.
  */
 export const PINNED_CHECKSUMS: Record<string, Record<string, string>> = {
+  "1.0.1": {
+    "gpc-darwin-arm64": "e565b94492c078a5e7ce31d4b28ad9921e129ad38f8a18597ad818924a4f199b",
+    "gpc-darwin-x64": "a0ac30780e376b824d748e26c2b1cd9cc8ad1fc4532214c54388254f85a80dac",
+    "gpc-linux-arm64": "77a067eb23dd91782e62097bd12bb2572a873264058f4c91efaef04dd65c4462",
+    "gpc-linux-x64": "e29678d0f8da4264b8483dcfd3893a9c71ea4e2dcb4b89ffde059d42ac61fe85",
+    "gpc-windows-x64.exe": "038b366bda9179f237ab003edbcd45e5bc5b6d1c1c6c224cb4667cc3599b30f8",
+  },
   "1.0.0": {
     "gpc-darwin-arm64": "ba426ac33718a1eb176e1da6f76b8262a95c072dba40a621db84e943edce5de4",
     "gpc-darwin-x64": "d4bf40f45bde512e75cb53455d02cd818c4046ec33c8270d173ee342d2bc5fc2",
